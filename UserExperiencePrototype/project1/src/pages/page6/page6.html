@@ -1,0 +1,46 @@
+
+<ion-header>
+  <ion-navbar color="reallyred">
+
+    <ion-title>Recipe</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="Page6">
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <img [src]="slide.image" class="slide-image" />
+      <h2 class="slide-title2" [innerHTML]="slide.title2"></h2>
+      <ion-list inset>
+        <ion-item text-wrap>
+          <p [innerHTML]="slide.description"></p>
+        </ion-item>
+        <ion-item text-wrap>  <p [innerHTML]="slide.description2"></p></ion-item>
+        <ion-item text-wrap>  <p [innerHTML]="slide.description3"></p></ion-item>
+        <ion-item text-wrap>  <p [innerHTML]="slide.description4"></p></ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="../../../www/images/bbcgoodfood.jpg" class="slide-image" />
+      <h4 class="slide-title">Recipe from Good Food magazine, September 2016</h4>
+      <ion-col>
+        <ion-item color="settingsbg">
+          <ion-icon name="alarm" item-start></ion-icon>
+          Prep Time: 5 mins.
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item color="settingsbg">
+          <ion-icon name="restaurant" item-start></ion-icon>
+          Skills: Easy
+        </ion-item>
+      </ion-col>
+      <button ion-button navPop>Back to Discover page</button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+
+<!--// https://www.bbcgoodfood.com/recipes/frying-pan-pizza-aubergine-ricotta-mint-->

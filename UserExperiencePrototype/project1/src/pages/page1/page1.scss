@@ -1,0 +1,38 @@
+page-page1 {
+ 
+
+  .ion-md-share {
+    color: #ED4248;
+  }
+
+  .ion-md-arrow-dropright-circle {
+    color: #508AE4;
+  }
+
+
+
+  .action-sheet-cancel ion-icon,
+  .action-sheet-destructive ion-icon {
+    color: #757575;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes spin {
+    0% {
+      -moz-transform: rotate(0deg);
+    }
+
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+}

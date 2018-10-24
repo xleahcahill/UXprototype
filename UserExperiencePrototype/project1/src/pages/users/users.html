@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="bluey">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Follow new users!</ion-title>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form (ngSubmit)="set()">
+    <ion-item>
+      <ion-label>Search for staff..</ion-label>
+      <ion-input type="text" [(ngModel)]="searchInput" name="staff"></ion-input>
+    </ion-item>
+    <button ion-button icon-left block>
+      <ion-icon name="search"></ion-icon>
+      Search
+    </button>
+  </form>
+  <ion-list>
+    <ion-item *ngFor="let item of list">
+      <ion-avatar item-left>
+        <img src="{{item.picture.thumbnail}}">
+      </ion-avatar>
+      <h2>{{item.name.first}} {{item.name.last}}</h2>
+      <p>{{item.email}}</p>
+      <button item-right ion-button icon-only [navPush]="pushPage">Find this member</button>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-footer>
+
+  </ion-footer>
+
+</ion-content>

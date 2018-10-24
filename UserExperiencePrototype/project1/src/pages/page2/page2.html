@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="bluey">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Find the campus</ion-title>
+  </ion-navbar>
+  <ion-list-header color="dark">
+    <h2>Enter postcode or start from current location</h2>
+  </ion-list-header>
+  <ion-card class="adv-map">
+    <div style="position: relative">
+      <img src=".../../../www/images/mapone.jpg">
+      <ion-fab right top>
+        <button ion-fab class="fab-map">
+          <ion-icon name='pin'></ion-icon>
+        </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='school'></ion-icon>
+      <h2>UWTSD SA1 Campus</h2>
+      <p>Waterfront, Swansea, SA1 5DN</p>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Enter your postcode:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button color="primary" block>Go</button>
+      </ion-item>
+      <ion-item actions>
+        <p> Or navigate from current location</p>
+        <span ion-text item-start color="secondary" class="item-bold">18 min</span>
+        <span ion-text item-start color="subtle">(2.6 mi)</span>
+        <button ion-button color="primary" clear item-end icon-start>
+          <ion-icon name='navigate'></ion-icon>
+          Start
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-card>

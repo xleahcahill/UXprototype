@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-navbar color="bluey">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Campus map</ion-title>
+
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="segmentmap">
+      <ion-segment-button value="Indoor">
+        Indoor
+      </ion-segment-button>
+      <ion-segment-button value="Outdoor">
+        Outdoor
+      </ion-segment-button>
+      <ion-segment-button value="ummm">
+        Search
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="segmentmap">
+    <ion-list *ngSwitchCase="'Indoor'">
+ 
+        <ion-list-header color="dark">
+          <h2>Indoor map of SA1 campus</h2>
+        </ion-list-header>
+
+
+        <!--PUT CONTENT HERE OF INDOOR MAP-->
+        <ion-card>
+          <img src=".../../../www/images/indoormap.jpg" />
+        </ion-card>
+
+        <ion-card>
+          <img src=".../../../www/images/indoormap3.jpg" />
+        </ion-card>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Outdoor'">
+      
+        <ion-list-header color="dark">
+          <h2>Outdoor grounds of SA1 campus</h2>
+        </ion-list-header>
+        <!--OURDOOR CONTENT HERE-->
+        <ion-card>
+          <img src=".../../../www/images/outdoormap.jpg" />
+
+        </ion-card>
+ 
+        <ion-card>
+          <img src=".../../../www/images/indoormap2.jpg" />
+
+        </ion-card>
+  
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'ummm'">
+      <!--FILL THIRD SEGMENT CONTENT HERE-->
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-card class="adv-map">
+        <div style="position: relative">
+          <img src=".../../../www/images/mapone.jpg">
+          <ion-fab right top>
+            <button ion-fab class="fab-map">
+              <ion-icon name='pin'></ion-icon>
+            </button>
+          </ion-fab>
+        </div>
+        <ion-item>
+          <ion-icon color="subtle" large item-start name='school'></ion-icon>
+          <h2>UWTSD SA1 Campus</h2>
+          <p>Waterfront, Swansea, SA1 5DN</p>
+        </ion-item>
+
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Find room</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <button ion-button color="primary" block>Go</button>
+   
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+    </ion-list>
+  </div>
+
+  <!-- page content underneath -->
+    <ion-card>
+      <ion-item >
+    <p> Discover the SA1 campus</p>
+    <p>by navigating through the segments</p>
+        <br />
+        <ion-avatar item-start>
+          <img src=".../../../www/images/uwtsd2.jpg"><h2>Swansea SA1</h2>
+        </ion-avatar>
+      </ion-item>
+      <img src=".../../../www/images/uwtsd.jpg">
+      <ion-card-content>
+        <ion-card-title>
+          New campus in 2019..
+        </ion-card-title>
+        <p>
+          UWTSD new waterfront campus in Swansea, new facilities..
+        </p>
+        <ion-row>
+
+          <ion-col>
+            <button ion-button icon-left clear small (click)="doPrompt()">
+              <ion-icon name="text"></ion-icon>
+              Comment
+            </button>
+            <!--<button ion-button color="secondary" block (click)="doPrompt()">Comment </button>-->
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

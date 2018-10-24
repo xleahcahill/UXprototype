@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="bluey">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>UWTSD Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-card>
+    <ion-item>
+      <button ion-button clear icon-start (click)="openMenu()" item-right>
+        <ion-icon name='link'></ion-icon>
+        Button
+      </button>
+      <ion-avatar item-start>
+        <img src=".../../../www/images/uwtsd2.jpg"><h2>Swansea SA1</h2>
+      </ion-avatar>
+    </ion-item>
+    <img src=".../../../www/images/uwtsd.jpg">
+    <ion-card-content>
+      <ion-card-title>
+        New campus in 2019..
+      </ion-card-title>
+      <p>
+        UWTSD new waterfront campus in Swansea, new facilities..
+      </p>
+      <ion-row>
+
+        <ion-col>
+          <button ion-button icon-left clear small (click)="doPrompt()">
+            <ion-icon name="text"></ion-icon>
+            Comment
+          </button>
+          <!--<button ion-button color="secondary" block (click)="doPrompt()">Comment </button>-->
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <button ion-button clear icon-start (click)="openMenu()" item-right>
+        <ion-icon name='link'></ion-icon>
+        Button
+      </button>
+      <ion-avatar item-start>
+        <img src=".../../../www/images/uwtsd2.jpg"><h2>Swansea Service's</h2>
+      </ion-avatar>
+    </ion-item>
+    <img src=".../../../www/images/uwtsd3.jpg">
+    <ion-card-content>
+      <ion-card-title>
+        Our feedback
+      </ion-card-title>
+      <p>
+        Read what our previous students have rated UWTSD..
+      </p>
+      <ion-row>
+
+        <ion-col>
+          <button ion-button icon-left clear small (click)="doPrompt()">
+            <ion-icon name="text"></ion-icon>
+            Comment
+          </button>
+          <!--<button ion-button color="secondary" block (click)="doPrompt()">Comment </button>-->
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button secondary menuToggle>Menu</button>
+</ion-content>
